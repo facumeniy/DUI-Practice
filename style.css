@@ -111,22 +111,14 @@ header{
     width: 100%;
     height: 90vh;
     overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     border: 2PX SOLID RED;
 }
-.slide {
-    width: 500px;
-    height: 300px;
-    float: left;
-}
-#first-slide{
+#image{
+    position: absolute;
+    z-index: -1;
     width: 100%;
-    height: 100%;
-    background-image: url(/images/slide1.jpg);
-    background-size: cover;
-}
-#second-slide{
-    width: 100%;
-    height: 100%;
-    background-image: url(/images/slide2.jpg);
-    background-size: cover;
 }

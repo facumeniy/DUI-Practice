@@ -40,15 +40,49 @@ womenNav.addEventListener('mouseout', () => {
 
 
 
+// CAROUSEL
+const image = document.querySelector('#image');
+const prevButton = document.querySelector('#prev-button');
+const nextButton = document.querySelector('#next-button');
 
-var carousel = document.getElementById("carousel");
-var slides = carousel.getElementsByClassName("slide");
-var currentSlide = 0;
+let currentIndex = 0;
+
+const imageURLs = [
+    '/images/slide1.jpg',
+    '/images/slide2.jpg',
+    '/images/adidas.png'
+];
+
+image.src = imageURLs[currentIndex];
+
+prevButton.addEventListener('click', () => {
+    currentIndex--;
+
+    if (currentIndex < 0) {
+      currentIndex = imageURLs.length - 1;
+    }
+
+    image.src = imageURLs[currentIndex];
+});
+
+nextButton.addEventListener('click', () => {
+    currentIndex++;
+
+    if (currentIndex === imageURLs.length){
+      currentIndex = 0;
+    }
+
+    image.src = imageURLs[currentIndex];
+});
 
 function nextSlide() {
-  slides[currentSlide].style.display = "none";
-  currentSlide = (currentSlide + 1) % slides.length;
-  slides[currentSlide].style.display = "block";
+    currentIndex++; 
+
+    if (currentIndex === imageURLs.length){
+        currentIndex = 0;
+    }
+
+    image.src = imageURLs[currentIndex];
 }
 
-setInterval(nextSlide, 10000); 
+setInterval(nextSlide, 2000); 
