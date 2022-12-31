@@ -6,7 +6,7 @@
 }
 body{
     width: 100%;
-    height: 200vh;
+    height: 300vh;
     background-color: rgb(87, 10, 10);
 }
 a{
@@ -16,11 +16,16 @@ header{
     width: 100%;
     height: 100px;
     padding: 0px 20px;
+    position: fixed;
     background-color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
+    z-index: 999;
+}
+.spacing{
+    height: 100px;
 }
 .logo-container{
     height: 100%;
@@ -42,14 +47,12 @@ header{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    border: 1px solid red;
 }
 .nav li{
     padding: 0px 20px;
     margin-bottom: 10px;
     text-transform: uppercase;
     display: inline-block;
-    border: 1px solid blue;
 }
 .item-container{
     height: 100%;
@@ -107,6 +110,14 @@ header{
 }
 /* END OF CLASSES */
 
+.banner-cont{
+    display: flex;
+    background-size: cover;
+}
+#banner{
+    width: 100%;
+}
+/* CAROUSEL */
 #carousel{
     width: 100%;
     height: 90vh;
@@ -115,10 +126,65 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 2PX SOLID RED;
 }
 #image{
     position: absolute;
     z-index: -1;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.button{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+#prev-button{
+    font-size: 35px;
+    padding-right: 5px;
+    margin: 0;
+    color: #ffffffb6;
+}
+#next-button{
+    font-size: 35px;
+    padding-left: 5px;
+    margin: 0;
+    color: #ffffffb6;
+}
+#prev-button:hover{
+    color: white;
+}
+#next-button:hover{
+    color: white;
+}
+.text-cont{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+.text{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    width: 30%;
+    height: 8%;
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: white;
+    background-color: black;
+}
+.text:hover{
+    cursor: pointer;
+    background-color: #1f1f1f;
+}
+#text-icon{
+    margin-left: 20px;
+    margin-bottom: 0;
+    color: white;
 }

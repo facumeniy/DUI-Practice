@@ -1,3 +1,7 @@
+// HEADER
+const header = document.getElementById("header");
+const hideThreshold = 50;
+
 const dropdown = document.getElementById("nav-dropdown");
 const womenDropdown = document.getElementById("nav-women-dropdown");
 
@@ -7,8 +11,9 @@ const womenNav = document.getElementById("women");
 const menContainer = document.getElementById("men-container");
 const womenContainer = document.getElementById("women-container");
 
+// ONLOAD
 dropdown.classList.add("hide");
-womenDropdown.classList.add("hide");
+womenDropdown.classList.add("hide");  
 
 menNav.addEventListener('mouseover', () => {
     setTimeout(function() {
@@ -41,40 +46,21 @@ womenNav.addEventListener('mouseout', () => {
 
 
 // CAROUSEL
+
+// SELECTORS
 const image = document.querySelector('#image');
 const prevButton = document.querySelector('#prev-button');
 const nextButton = document.querySelector('#next-button');
 
+// GLOBAL VARIABLES
 let currentIndex = 0;
-
 const imageURLs = [
     '/images/slide1.jpg',
     '/images/slide2.jpg',
-    '/images/adidas.png'
+    '/images/slide3.jpg'
 ];
 
-image.src = imageURLs[currentIndex];
-
-prevButton.addEventListener('click', () => {
-    currentIndex--;
-
-    if (currentIndex < 0) {
-      currentIndex = imageURLs.length - 1;
-    }
-
-    image.src = imageURLs[currentIndex];
-});
-
-nextButton.addEventListener('click', () => {
-    currentIndex++;
-
-    if (currentIndex === imageURLs.length){
-      currentIndex = 0;
-    }
-
-    image.src = imageURLs[currentIndex];
-});
-
+// FUNCTIONS
 function nextSlide() {
     currentIndex++; 
 
@@ -85,4 +71,33 @@ function nextSlide() {
     image.src = imageURLs[currentIndex];
 }
 
-setInterval(nextSlide, 2000); 
+// ONLOAD
+image.src = imageURLs[currentIndex];
+let changeSlide = setInterval(nextSlide, 10000);
+
+// EVENT LISTENERS
+prevButton.addEventListener('click', () => {
+    currentIndex--;
+
+    if (currentIndex < 0) {
+      currentIndex = imageURLs.length - 1;
+    }
+
+    image.src = imageURLs[currentIndex];
+
+    clearInterval(changeSlide);
+    changeSlide = setInterval(nextSlide, 10000);
+});
+
+nextButton.addEventListener('click', () => {
+    currentIndex++;
+
+    if (currentIndex === imageURLs.length){
+      currentIndex = 0;
+    }
+
+    image.src = imageURLs[currentIndex];
+
+    clearInterval(changeSlide);
+    changeSlide = setInterval(nextSlide, 10000);
+});
