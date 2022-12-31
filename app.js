@@ -55,9 +55,9 @@ const nextButton = document.querySelector('#next-button');
 // GLOBAL VARIABLES
 let currentIndex = 0;
 const imageURLs = [
-    '/images/slide1.jpg',
-    '/images/slide2.jpg',
-    '/images/slide3.jpg'
+    'https://facumeniy.github.io/DUI-Practice/images/slide1.jpg',
+    'https://facumeniy.github.io/DUI-Practice/images/slide2.jpg',
+    'https://facumeniy.github.io/DUI-Practice/images/slide3.jpg'
 ];
 
 // FUNCTIONS
