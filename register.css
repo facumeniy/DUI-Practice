@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.register-container{
+    width: 30%;
+    height: 90%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+}
+.logo-container{
+    width: 100%;
+    height: 15%;
+    min-height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#logo{
+    height: 100%;
+}
+.form-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+.form-div{
+    width: 100%;
+    height: 80px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+.input{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #707070;
+}
+.country-container{
+    height: 100%;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttons-container{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.button-div{
+    width: 100%;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+.button{
+    width: 100%;
+    height: 50px;
+    border: none;
+    box-sizing: border-box;
+}
+.button:hover{
+    cursor: pointer;
+}
+#login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    background-color: black;
+    color: white;
+}
+#login:hover{
+    background-color: #141414;
+}
+#register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    border: 1px solid black;
+}
+#register:hover{
+    background-color: #dfdfdf;
+}
+#email:valid {
+    border: 2px solid rgb(63, 199, 131);
+}
