@@ -15,27 +15,35 @@
     <link rel="stylesheet" href="register.css">
 </head>
 <body>
+    <div class="empty-container">
+        <div class="empty-container-div"></div>
+        <div class="empty-container-div"></div>
+        <div class="left-empty-container-div">
+            <div id="country-error" class="error-msg">Seleccione un país</div>
+        </div>
+    </div>
+
     <div class="register-container">
         <div class="logo-container">
-            <img id="logo" src="/images/adidas.png" alt="logo">
+            <a href="index.html"><img id="logo" src="/images/adidas.png" alt="logo"></a>
         </div>
 
         <div class="form-container">
             <form id="form" action="">
-                <div class="form-div">
-                    <input required class="input" id="email" type="email" placeholder="Correo Electrónico">
+                <div id="first-input" class="form-div">
+                    <input class="input" id="email" type="email" placeholder="Correo Electrónico">
                 </div>
                 <div class="form-div">
-                    <input required class="input" id="password" type="password" placeholder="Contraseña">
+                    <input class="input" id="password" type="password" placeholder="Contraseña">
                 </div>
                 <div class="form-div">
-                    <input required class="input" id="password-confirm" type="password" placeholder="Confirmar contraseña">
+                    <input class="input" id="password-confirm" type="password" placeholder="Confirmar contraseña">
                 </div>
                 <div class="form-div">
                     <div class="country-container">
-                        <select class="input" id="country" name="country">
-                            <option selected>País</option>
-                            <option value="canada">Canada</option>
+                        <select class="input" id="country">
+                            <option value ="" selected>País</option>
+                            <option value="argentina">Argentina</option>
                             <option value="usa">USA</option>
                             <option value="uk">UK</option>
                             <option value="france">France</option>
@@ -43,7 +51,7 @@
                           </select>
                     </div>
                     <div class="country-container">
-                        <input class="input" id="zip" type="text" placeholder="ZIP Code">
+                        <input minlength="4" maxlength="4" class="input" id="zip" type="text" placeholder="ZIP Code">
                     </div>
                 </div>
                 <div class="buttons-container">
@@ -55,6 +63,18 @@
                     </div>
                 </div>
             </form>
+        </div>
+    </div>
+
+    <div class="empty-container">
+        <div class="empty-container-div">
+            <div id="wrong-password" class="error-msg">Contraseña incorrecta. Al menos 8 caracteres y un número, sin espacios.</div>
+        </div>
+        <div class="empty-container-div">
+            <div id="passwords-match" class="error-msg">Las contraeñas no coinciden</div>
+        </div>
+        <div class="empty-container-div">
+            <div id="zipcode" class="error-msg">Ingrese su código postal. 4 digitos.</div>
         </div>
     </div>
     
