@@ -92,6 +92,7 @@ header{
 }
 .material-symbols-sharp{
     color: black;
+    user-select: none;
     font-variation-settings:
     'FILL' 0,
     'wght' 400,
@@ -115,6 +116,7 @@ header{
     background-size: cover;
 }
 #banner{
+    user-select: none;
     width: 100%;
 }
 /* CAROUSEL */

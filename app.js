@@ -11,6 +11,8 @@ const womenNav = document.getElementById("women");
 const menContainer = document.getElementById("men-container");
 const womenContainer = document.getElementById("women-container");
 
+const featuredBtn = document.getElementById("featured-btn");
+
 // ONLOAD
 dropdown.classList.add("hide");
 womenDropdown.classList.add("hide");  
@@ -60,6 +62,13 @@ const imageURLs = [
     'https://facumeniy.github.io/DUI-Practice/images/slide3.jpg'
 ];
 
+const imageTexts = [
+    'CELEBRÁ CON LOS CAMPEONES',
+    'QATAR 2022',
+    'ADIDAS COPA 2023'
+];
+
+
 // FUNCTIONS
 function nextSlide() {
     currentIndex++; 
@@ -69,6 +78,8 @@ function nextSlide() {
     }
 
     image.src = imageURLs[currentIndex];
+    featuredBtn.innerText = imageTexts[currentIndex];
+
 }
 
 // ONLOAD
@@ -84,6 +95,7 @@ prevButton.addEventListener('click', () => {
     }
 
     image.src = imageURLs[currentIndex];
+    featuredBtn.innerText = imageTexts[currentIndex];
 
     clearInterval(changeSlide);
     changeSlide = setInterval(nextSlide, 10000);
@@ -97,6 +109,7 @@ nextButton.addEventListener('click', () => {
     }
 
     image.src = imageURLs[currentIndex];
+    featuredBtn.innerText = imageTexts[currentIndex];
 
     clearInterval(changeSlide);
     changeSlide = setInterval(nextSlide, 10000);
