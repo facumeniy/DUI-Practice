@@ -4,6 +4,9 @@
     white-space: nowrap;
     font-family: 'Poppins', sans-serif;
 }
+li{
+    list-style: none;
+}
 body{
     width: 100%;
     height: 300vh;
@@ -75,6 +78,7 @@ header{
     position: absolute;
     width: 100%;
     height: 500px;
+    padding: 40px 80px;
     background-color: white;
     border: 1.5px solid #ecf1f1;
 }
